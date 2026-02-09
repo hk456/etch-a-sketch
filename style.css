@@ -4,13 +4,6 @@
     box-sizing:border-box;
 }
 
-
 #mainCanvas{
     border: 1px solid black;
-}
-
-@media (min-width: 375px){
-    body{
-        background-color: gray;
-    }
 }

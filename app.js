@@ -3,6 +3,7 @@ const ctx = canvas.getContext("2d");
 const colorPicker = document.getElementById("colorPicker");
 const brushSize = document.getElementById("brushSize");
 const clearBtn = document.getElementById("clearBtn");
+const handTool = document.getElementById("handTool");
 
 canvas.width = window.innerWidth-20;
 canvas.height = window.innerHeight-75;
@@ -37,6 +38,15 @@ function resizeCanvas(){
     canvas.height = window.innerHeight-75;
 }
 
+function useHandTool(e){
+    // toggle the drawing functionality of the thing, based on if its clicking on or off
+    isDrawing = !isDrawing;
+
+    
+
+}
+
+handTool.addEventListener("click",useHandTool);
 document.addEventListener("mousedown",startDrawing);
 document.addEventListener("mousemove",draw);
 document.addEventListener("mouseup",stopDrawing);
